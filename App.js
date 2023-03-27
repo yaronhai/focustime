@@ -7,9 +7,10 @@ import { TextInput } from 'react-native-paper';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
+      <Text>Yaron Hai</Text>
       <Text style={styles.text}>mobile App try</Text>
-      <TextInput label="Full Name" />
-      <TextInput label="Adress" />
+      <TextInput  style={styles.textInput} label="Full Name" />
+      <TextInput style={styles.textInput} label="Adress" />
       <Focus />
     </SafeAreaView>
   );
@@ -18,11 +19,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection:'column',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    backgroundColor: colors.darkBlue
-
+    backgroundColor: colors.darkBlue,
   },
+  
   text: {
-    color: colors.white
+    color: colors.white,
+    padding: 20
+    ,
+  },
+  
+  textInput: {
+    flex:0.5,
+    margin:10, 
   }
 });
